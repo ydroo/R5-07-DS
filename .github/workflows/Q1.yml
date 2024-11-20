@@ -2,14 +2,16 @@ on: [push]
 jobs:
   contents:
     runs-on: ubuntu-latest
-    steps:      
-      - name: Création de Q1_archive_README.md
-        run: README.md > Q1_archive_README.md
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
       
       - name: Commit et push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git config --global user.name "ydroo"
-          git config --global user.email "baillobaytrystan06@gmail.com"
+          git config --global user.name ydroo
+          git config --global user.email baillobaytrystan06@gmail.com
           git add Q1_archive_README.md
           git commit -m "Ajout de Q1_archive_README.md"
           git push
