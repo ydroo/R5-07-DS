@@ -4,7 +4,7 @@ public class Q4 {
 		String s = "";
 		for (int i=1; i<=x; i++)
 		{
-			for (int j=0; j<=i; j++)
+			for (int j=0; j<i; j++)
 				s+= "*";
 			s+="\n";
 		}
