@@ -11,7 +11,7 @@ jobs:
           current_date=$(date +'%d-%m-%Y')
           echo "Trystan Baillobay" > Q4_archive_date.txt
           javac Q4.java
-          java Q4 4 >> Q4_archive_date.txt
+          java Q4 5 >> Q4_archive_date.txt
   
       - name: Commit et push
         env:
