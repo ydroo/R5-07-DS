@@ -20,4 +20,5 @@ jobs:
           git config --global user.email baillobaytrystan06@gmail.com
           git add Q2_archive_README.md
           git commit -m "Ajout de Q2_archive_README.md"
+          git pull
           git push
