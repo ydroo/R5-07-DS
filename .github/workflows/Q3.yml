@@ -21,5 +21,6 @@ jobs:
           git config --global user.name ydroo
           git config --global user.email baillobaytrystan06@gmail.com
           git add Q3_archive_java.txt
+          git add Q3.class
           git commit -m "Ajout de Q3_archive_java.txt"
           git push
