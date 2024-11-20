@@ -9,7 +9,7 @@ jobs:
       - name: Créer Q4_archive_date.txt
         run: |
           current_date=$(date +'%d-%m-%Y')
-          echo "Trystan Baillobay" > Q4_archive_README.md
+          echo "Trystan Baillobay" > Q4_archive_date.txt
           javac Q4.java
           java Q4 4 >> Q4_archive_date.txt
   
@@ -21,7 +21,7 @@ jobs:
           git pull
           git config --global user.name ydroo
           git config --global user.email baillobaytrystan06@gmail.com
-          git add Q4_archive_java.txt
+          git add Q4_archive_date.txt
           git add Q4.class
-          git commit -m "Ajout de Q4_archive_java.txt"
+          git commit -m "Ajout de Q4_archive_date.txt"
           git push
