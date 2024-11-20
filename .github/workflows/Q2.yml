@@ -3,13 +3,19 @@ jobs:
   contents:
     runs-on: ubuntu-latest
     steps:      
-      - name: Création de Q2_archive_README.md
-        run: Q2_archive_README.md
+      - name: Création de Q2_archive_README.md et ajout de son contenu
+        run: |
+          'Trystan Baillobay' > Q2_archive_README.md
+          date > Q2_archive_README.md
+          README.md > Q2_archive_README.md
+          
+      - name: Check out repository code
+        uses: actions/checkout@v4
       
       - name: Commit et push
         run: |
           git config --global user.name "ydroo"
           git config --global user.email "baillobaytrystan06@gmail.com"
-          git add Q1_archive_README.md
-          git commit -m "Ajout de Q1_archive_README.md"
+          git add Q2_archive_README.md
+          git commit -m "Ajout de Q2_archive_README.md"
           git push
