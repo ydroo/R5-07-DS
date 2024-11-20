@@ -2,17 +2,19 @@ on: [push]
 jobs:
   contents:
     runs-on: ubuntu-latest
-    steps:      
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+
       - name: Création de Q2_archive_README.md et ajout de son contenu
         run: |
           echo "Trystan Baillobay" > Q2_archive_README.md
-          date > Q2_archive_README.md
-          cat ${{ github.repository }}/README.md > Q2_archive_README.md
-          
-      - name: Check out repository code
-        uses: actions/checkout@v4
+          date >> Q2_archive_README.md
+          cat README.md >> Q2_archive_README.md
       
       - name: Commit et push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global user.name "ydroo"
           git config --global user.email "baillobaytrystan06@gmail.com"
