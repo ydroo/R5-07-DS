@@ -4,7 +4,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:      
       - name: Création de Q1_archive_README.md
-        run: date > Q1_archive_README.md
+        run: Q1_archive_README.md
       
       - name: Commit et push
         run: |
