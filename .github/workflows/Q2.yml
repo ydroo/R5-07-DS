@@ -7,7 +7,7 @@ jobs:
         run: |
           echo "Trystan Baillobay" > Q2_archive_README.md
           date > Q2_archive_README.md
-          cat README.md > Q2_archive_README.md
+          cat ${{ github.repository }}/README.md > Q2_archive_README.md
           
       - name: Check out repository code
         uses: actions/checkout@v4
