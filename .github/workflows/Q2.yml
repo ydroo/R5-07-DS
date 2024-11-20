@@ -5,9 +5,9 @@ jobs:
     steps:      
       - name: Création de Q2_archive_README.md et ajout de son contenu
         run: |
-          'Trystan Baillobay' > Q2_archive_README.md
+          echo "Trystan Baillobay" > Q2_archive_README.md
           date > Q2_archive_README.md
-          README.md > Q2_archive_README.md
+          cat README.md > Q2_archive_README.md
           
       - name: Check out repository code
         uses: actions/checkout@v4
