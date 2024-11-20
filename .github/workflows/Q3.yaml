@@ -9,8 +9,8 @@ jobs:
       - name: Création de Q3_archive_java.txt et ajout de son contenu
         run: |
           echo "Trystan Baillobay" > Q3_archive_java.txt
-          javac Q3.java 5
-          java Q3 >> Q3_archive_java.txt
+          javac Q3.java
+          java Q3 5 >> Q3_archive_java.txt
       
       - name: Commit et push
         env:
